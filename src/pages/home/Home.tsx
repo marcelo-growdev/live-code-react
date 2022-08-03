@@ -25,7 +25,7 @@ const Home: React.FC = () => {
   return (
     <Grid container spacing={2}>
       <Grid item spacing={2} container xs={12}>
-      <Typography variant="h2">Home</Typography>
+        <Typography variant="h2">Home</Typography>
       </Grid>
     </Grid>
   );
