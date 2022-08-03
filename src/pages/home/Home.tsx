@@ -25,34 +25,7 @@ const Home: React.FC = () => {
   return (
     <Grid container spacing={2}>
       <Grid item spacing={2} container xs={12}>
-        <Grid item xs={12}>
-          <Typography variant="h3">Adicionar Item</Typography>
-        </Grid>
-        <Grid item xs={10}>
-          <TextField
-            name="description"
-            label="Descrição"
-            fullWidth
-            value={description}
-            inputRef={ref}
-            onChange={(e) => setDescription(e.target.value)}
-          />
-        </Grid>
-        <Grid item xs={2}>
-          <Button variant="outlined" onClick={handleAdd}>
-            Adicionar
-          </Button>
-        </Grid>
-      </Grid>
-      <Grid item xs={12}>
-        {items.map((item) => (
-          <ItemList
-            uid={item.uid}
-            item={item.description}
-            key={item.uid}
-            checked={item.checked}
-          />
-        ))}
+      <Typography variant="h2">Home</Typography>
       </Grid>
     </Grid>
   );
