@@ -1,27 +1,23 @@
 import { createEntityAdapter, createSlice } from '@reduxjs/toolkit';
 
-export interface Book {
-  uid: string;
-  title: string;
-}
-
-const adapter = createEntityAdapter<Book>({
+const adapter = createEntityAdapter({
   selectId: (item) => item.uid,
 });
 
 export const { selectAll, selectById } = adapter.getSelectors(
-  (state: any) => state.sliceName
+  (state) => state.items
 );
 
-const sliceNameSlice = createSlice({
-  name: 'sliceName',
+const itemsSlice = createSlice({
+  name: 'items',
   initialState: adapter.getInitialState(),
   reducers: {
     addOne: adapter.addOne,
     addMany: adapter.addMany,
     updateOne: adapter.updateOne,
+    clear: adapter.removeAll,
   },
 });
 
-export const { addOne, addMany, updateOne } = sliceNameSlice.actions;
-export default sliceNameSlice.reducer;
+export const { addOne, addMany, updateOne, clear } = itemsSlice.actions;
+export default itemsSlice.reducer;

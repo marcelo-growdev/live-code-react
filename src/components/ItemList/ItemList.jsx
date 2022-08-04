@@ -1,15 +1,10 @@
-import React from 'react';
-import { Paper, Typography } from '@mui/material';
-import { useAppDispatch } from '../../store/hooks';
-import { updateOne } from '../../store/modules/items/ItemsSlice';
+import React from "react";
+import { useDispatch } from "react-redux";
+import { Paper, Typography } from "@mui/material";
+import { updateOne } from "../../store/modules/items/ItemsSlice";
 
-interface ItemListProps {
-  uid: string;
-  item: string;
-  checked: boolean;
-}
-const ItemList: React.FC<ItemListProps> = ({ uid, item, checked }) => {
-  const dispatch = useAppDispatch();
+function ItemList({ uid, item, checked }) {
+  const dispatch = useDispatch();
 
   const handleClick = () => {
     dispatch(updateOne({ id: uid, changes: { checked: !checked } }));
@@ -29,6 +24,6 @@ const ItemList: React.FC<ItemListProps> = ({ uid, item, checked }) => {
       )}
     </Paper>
   );
-};
+}
 
 export default ItemList;

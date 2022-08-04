@@ -5,16 +5,7 @@ import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
-export interface ItemAccordionI {
-  id: number;
-  title: string;
-  text: string;
-}
-
-interface DynamicAccordionPros {
-  items: Array<ItemAccordionI>;
-}
-const DynamicAccordion: React.FC<DynamicAccordionPros> = ({ items }) => {
+function DynamicAccordion({ items }) {
   return (
     <>
       {items.map((item) => {
@@ -35,6 +26,6 @@ const DynamicAccordion: React.FC<DynamicAccordionPros> = ({ items }) => {
       })}
     </>
   );
-};
+}
 
 export default DynamicAccordion;

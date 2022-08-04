@@ -2,7 +2,7 @@ import { Grid, Typography } from '@mui/material';
 import React from 'react';
 import DynamicAccordion from '../../components/DynamicAccordion/DynamicAccordion';
 
-const Faqs: React.FC = () => {
+function Faqs() {
   const items = [
     {
       id: 1,
@@ -33,6 +33,6 @@ const Faqs: React.FC = () => {
       </Grid>
     </Grid>
   );
-};
+}
 
 export default Faqs;

@@ -1,7 +1,7 @@
 import React from 'react';
 import GlobalStyles from '@mui/material/GlobalStyles';
 
-const StylesGlobal: React.FC = () => {
+function StylesGlobal() {
   return (
     <GlobalStyles
       styles={{
@@ -9,6 +9,6 @@ const StylesGlobal: React.FC = () => {
       }}
     />
   );
-};
+}
 
 export default StylesGlobal;

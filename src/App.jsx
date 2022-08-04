@@ -7,7 +7,7 @@ import AppRoutes from './routes/AppRoutes';
 import StylesGlobal from './config/GlobalStyles';
 import { store } from './store';
 
-const App: React.FC = () => {
+function App(){
   return (
     <Provider store={store}>
       <ThemeProvider theme={ThemeDefault}>

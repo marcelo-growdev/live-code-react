@@ -1,7 +1,6 @@
 import { Grid, Typography } from '@mui/material';
 import React from 'react';
-
-const About: React.FC = () => {
+function About() {
   return (
     <Grid container spacing={2}>
       <Grid item xs={12}>
@@ -25,6 +24,6 @@ const About: React.FC = () => {
       </Grid>
     </Grid>
   );
-};
+}
 
 export default About;

@@ -1,11 +1,7 @@
 import React from 'react';
 
-interface BooksProps {
-  title: string;
-}
-
-const Books: React.FC = () => {
-  const data: any = [];
+function Books() {
+  const data = [];
 
   return (
     <div>
@@ -14,7 +10,7 @@ const Books: React.FC = () => {
       </h1>
       {data.length && (
         <>
-          {data.map((item: any): any => {
+          {data.map((item) => {
             return (
               <div>
                 <h1>{item}</h1>
@@ -35,6 +31,6 @@ const Books: React.FC = () => {
       )}
     </div>
   );
-};
+}
 
 export default Books;

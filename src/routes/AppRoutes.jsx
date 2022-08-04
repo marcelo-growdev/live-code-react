@@ -1,12 +1,12 @@
-import React from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import LayoutDefault from '../config/layout/Default';
-import About from '../pages/about/About';
-import Home from '../pages/home/Home';
-import Faqs from '../pages/faqs/Faqs';
-import Books from '../pages/books/Books';
+import React from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import LayoutDefault from "../config/layout/Default";
+import About from "../pages/about/About";
+import Home from "../pages/home/Home";
+import Faqs from "../pages/faqs/Faqs";
+import Books from "../pages/books/Books";
 
-const AppRoutes: React.FC = () => {
+function AppRoutes() {
   return (
     <BrowserRouter>
       <Routes>
@@ -17,6 +17,6 @@ const AppRoutes: React.FC = () => {
       </Routes>
     </BrowserRouter>
   );
-};
+}
 
 export default AppRoutes;
