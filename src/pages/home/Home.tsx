@@ -25,9 +25,13 @@ const Home: React.FC = () => {
   return (
     <Grid container spacing={2}>
       <Grid item spacing={2} container xs={12}>
+<<<<<<< HEAD
 
 
       <Typography variant="h2">Home</Typography>
+=======
+        <Typography variant="h2">Home</Typography>
+>>>>>>> 575624c9ea4f508b3d0906d29f015b7ff9637c01
       </Grid>
 
 
